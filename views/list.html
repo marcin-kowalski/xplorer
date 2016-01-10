@@ -1,0 +1,11 @@
+    <div ng-controller="movieList">
+Available movies:
+         <table>
+{{ movies.length }}
+  <tr ng-repeat="x in movies">
+    <td>
+	<a href="#/status/{{x.id}}" class="thumb">{{ x.id }}</a></td>
+    <td>{{ x.path }}</td>
+  </tr>
+</table>
+      </div>
