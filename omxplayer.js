@@ -46,7 +46,7 @@ app.get('/start', function (req, res) {
 	if (id < model.movies.length) {
 		var file = model[id].path;
 		exec('omxplayer "' + file + '" < ' + pipePath, function(error, stdout, staderr) {
-			if (error!=null) console.log("error: " + error);			
+			if (error!==null) console.log("error: " + error);			
 
 		});
 		sendCommand("1");
@@ -99,7 +99,7 @@ app.get('/list', function(req, res) {
 app.get('/refresh', function(req, res) {
 	rebuildModel(function() {		
 		res.send(model);		
-	})
+	});
 });
 
 

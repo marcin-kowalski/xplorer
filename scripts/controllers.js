@@ -23,5 +23,5 @@ movieCtrls.controller('movieDetails', function($scope, $http, $location) {
 	
 	$scope.back = function() {
 		$location.path="/index.html";
-	}
+	};
 });
